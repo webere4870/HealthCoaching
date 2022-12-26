@@ -1,6 +1,9 @@
 
 $("#slideshow > div:gt(0)").hide();
-
+$('.overCard').hover((evt)=>
+{
+  
+})
 setInterval(function() { 
   $('.slide:first')
   .fadeOut(2000)

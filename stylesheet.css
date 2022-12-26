@@ -8,9 +8,10 @@
     --darkGray: #222629;
     --grayGradient: #222629d2;
     --lightGray: #474B4F;
-    --lightestGray: #6b6e70;
+    --lightestGray: #ebebeb;
     --mainFont: 'Poiret One', cursive;
     --thickFont: 'Ubuntu', sans-serif;
+    --darkColor: #171717;
 }
 *{
   margin: 0;
@@ -24,14 +25,50 @@ body{
   width: 100vw;
 }
 
+#about
+{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #171717;
+  padding: 75px 0;
+}
+
+#about h1{
+  width: 100%;
+  margin: unset;
+  padding: unset;
+}
+
+#aboutFollow
+{
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  background: var(--lightestGray);
+  padding: 40px 0;
+}
+
 .thick
 {
   font-family: var(--thickFont);
 }
 
-.gray
+.lightGray
 {
   color: var(--lightestGray);
+}
+
+.gray
+{
+  color: var(--lightGray);
 }
 
 .wrapText
@@ -65,6 +102,67 @@ h1
   top: 20px;
   right: 20px;
   z-index: 100;
+}
+
+
+
+#mainFollow
+{
+  min-height: 80vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 30px;
+}
+
+.stack
+{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#rowStack
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 70vh;
+  background: var(--lightestGray);
+  gap: 30px;
+}
+
+#rowStack svg{
+  fill: var(--accentColor) !important;
+}
+
+hr{
+  border: none;
+}
+hr:after{
+  font-size: 60px;
+  content: '';
+}
+
+#rowStack h3{
+  margin-bottom: 40px;
+}
+
+#rowStack p
+{
+  text-align: center;
+}
+
+#rowStack svg:nth-of-type(2)
+{
+  transform: rotate(180deg);
 }
 
 .wrapper{
@@ -129,6 +227,40 @@ h1
 	height: 100%;
 	pointer-events: none;
 	transition: all .6s;
+}
+
+#profilePic
+{
+  background-position: center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 300px;
+  background: url('./images/git.jpg');
+}
+
+#splitPage
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.p80
+{
+  width: 80%;
+}
+
+.half
+{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* closing animation */
@@ -546,6 +678,18 @@ ul {
 
 @media screen and (max-width: 768px)
 {
+  .stack
+  {
+    align-items: center;
+  }
+  .wrapText
+  {
+    width: 85%;
+  }
+    #mainFollow
+    {
+      flex-direction: column;
+    }
     .footer *
     {
         text-align: center !important;
