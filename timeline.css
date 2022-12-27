@@ -149,6 +149,13 @@ header .social .btn {
   -ms-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
+
+.timeline-content h2{
+    box-shadow: 0 -5px 20px rgb(201, 201, 201);
+}
+
+
+
 #timeline .timeline-item .timeline-content:before {
   content: '';
   position: absolute;

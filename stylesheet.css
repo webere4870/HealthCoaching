@@ -52,8 +52,15 @@ body{
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  background: var(--lightestGray);
+  background: white;
   padding: 40px 0;
+}
+
+#aboutFollow2
+{
+  min-height: 70vh;
+  width: 100vw;
+  background: white;
 }
 
 .thick
@@ -173,6 +180,7 @@ hr:after{
   height: 100%;
   width: 100%;
   background: #000;
+  z-index: 100;
   /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
@@ -183,7 +191,7 @@ hr:after{
   right:0;
 }
 .menu-btn{
-  position: absolute;
+  position: fixed;
   z-index: 2;
   right: 20px;
   /*left: 20px; */
@@ -195,12 +203,40 @@ hr:after{
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
+  z-index: 101;
+  background: var(--accentColor);
+  color: var(--accentColor);
+  box-shadow: 0 0 15px gray;
   /*color: #fff;*/
   /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
   transition: all 0.3s ease-in-out;
 }
+
+.gallery {
+  background: #EEE;
+  margin: 30px 0 100px 0;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
 
 .menu-btn span,
 .menu-btn:before,
@@ -269,11 +305,11 @@ hr:after{
 }
 #active:checked + .menu-btn:before {
 	transform: rotate(45deg);
-  border-color: #fff;
+  border-color: white;
 }
 #active:checked + .menu-btn:after {
 	transform: rotate(-45deg);
-  border-color: #fff;
+  border-color: white;
 }
 .wrapper ul{
   position: absolute;
@@ -505,7 +541,7 @@ ul {
     padding: 0px;
 }
 .footer-section {
-  background: #151414;
+  background: #202020;
   position: relative;
 }
 .footer-cta {
@@ -653,7 +689,7 @@ ul {
   transform: rotate(-6deg);
 }
 .copyright-area{
-  background: #202020;
+  background: #151414;
   padding: 25px 0;
 }
 .copyright-text p {
