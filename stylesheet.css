@@ -25,6 +25,31 @@ body{
   width: 100vw;
 }
 
+#aboutThird
+{
+  background: var(--lightestGray);
+  min-height: 30vh;
+  padding: 85px 0 15px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#aboutThird::before
+{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  background: var(--lightestGray);
+  content: '';
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+}
+
 #about
 {
   min-height: 100vh;
@@ -34,8 +59,9 @@ body{
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  background: #171717;
-  padding: 75px 0;
+  background: var(--lightestGray);
+  padding: 10px 0;
+  position: relative;
 }
 
 #about h1{
@@ -111,7 +137,150 @@ h1
   z-index: 100;
 }
 
+#servicesPage
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+  background-position: center !important;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  flex-direction: column;
+  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('./images/secondbg.jpg')
+}
 
+.center
+{
+  text-align: center;
+}
+
+#servicesFollow
+{
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 125px 0;
+}
+
+.accentBtn
+{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.bg-white
+{
+  background: white;
+  color: var(--accentColor);
+}
+
+.bg-accent
+{
+  background: var(--accentColor);
+  color: white;
+}
+
+.blockRow{
+  width: 100vw;
+  gap: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blockItem
+{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#servicesSecond
+{
+  height: 70vh;
+  width: 100vw;
+  background: var(--lightestGray);
+  position: relative;
+}
+
+#servicesSVG
+{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  fill: var(--lightestGray);
+}
+
+#aboutFirst
+{
+  min-height: min-content;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0 30px 0;
+}
+
+#aboutTwo
+{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0 170px 0;
+}
+
+#aboutOverlap
+{
+  width: 90%;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+}
+
+#leftOverlap
+{
+  width: 60%;
+  height: 70vh;
+  background: var(--lightestGray);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  transform: translateX(50px);
+  padding: 60px 125px 20px 40px;
+}
+
+#rightOverlap
+{
+  width: 40%;
+  height: 400px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background: url('./images/exercise1.jpg');
+  box-shadow: 0 0 20px gray;
+  transform: translate(-50px, 50px);
+}
 
 #mainFollow
 {
