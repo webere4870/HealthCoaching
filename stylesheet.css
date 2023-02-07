@@ -1,10 +1,10 @@
 :root
 {
     --mainGray: #343a40;
-    --accentColor: #86C232;
+    --accentColor: #13A99C;
     --darkGray: rgb(36, 36, 36);
-    --darkGreen: #61892f;
-    --lightGreen: #86C232;
+    --darkGreen: #13A99C;
+    --lightGreen: #13A99C;
     --darkGray: #222629;
     --grayGradient: #222629d2;
     --lightGray: #474B4F;
@@ -107,6 +107,75 @@ body{
 .wrapText
 {
   width: 60%;
+}
+
+#blogPage
+{
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogCard *
+{
+  padding: unset;
+  margin: unset;
+}
+
+.blogCard
+{
+  height: 250px;
+  width: 450px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+  box-shadow: 0 0 10px gray;
+  padding-right: 10px;
+  overflow: visible;
+}
+
+.blogDate{
+  color: gray;
+  font-weight: bold;
+  font-family: var(--thickFont);
+}
+
+.blogTitle{
+  color: var(--accentColor);
+  font-weight: bold;
+  font-family: var(--thickFont);
+}
+
+.blogCard img{
+  height: 150px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  transform: translateX(-30px);
+}
+
+.blogUnderDiv
+{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+
+.blogBtn
+{
+  padding: 5px 20px;
+  border-radius: 20px;
+  background: var(--accentColor);
+  color: white;
 }
 
 #positionOffScreen

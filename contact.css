@@ -1,6 +1,17 @@
 :root
 {
-    --accentColor: #86C232;
+    --mainGray: #343a40;
+    --accentColor: #13A99C;
+    --darkGray: rgb(36, 36, 36);
+    --darkGreen: #13A99C;
+    --lightGreen: #13A99C;
+    --darkGray: #222629;
+    --grayGradient: #222629d2;
+    --lightGray: #474B4F;
+    --lightestGray: #ebebeb;
+    --mainFont: 'Poiret One', cursive;
+    --thickFont: 'Ubuntu', sans-serif;
+    --darkColor: #171717;
 }
 * {
     padding: 0;
