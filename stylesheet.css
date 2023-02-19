@@ -117,11 +117,27 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px;
+  gap: 100px;
+}
+
+.text-xs{
+  background: var(--accentColor) !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white !important;
+  box-shadow: 0 0 5px gray;
+  font-size: .85rem !important;
 }
 .blogCard *
 {
   padding: unset;
   margin: unset;
+}
+
+.rounded:hover{
+  cursor: pointer;
+  box-shadow: 0 0 50px gray;
 }
 
 .blogCard
