@@ -57,11 +57,11 @@
     overflow: hidden;
   }
   .card0 {
-    background: url("./images/exercise1.jpg") center center no-repeat;
+    background: url("./images/serene.jpg") center center no-repeat;
     background-size: 300px;
   }
   #about >div:nth-of-type(1):hover .card0 {
-    background: url("./images/exercise1.jpg") left center no-repeat;
+    background: url("./images/serene.jpg") left center no-repeat;
     background-size: 600px;
     filter: blur(.4rem);
   }
@@ -76,12 +76,12 @@
     opacity: 1;
   }
   .card1 {
-    background: url("./images/exercise2.jpg") center center no-repeat;
+    background: url("./images/serene2.jpg") center center no-repeat;
     background-size: 300px;
     
   }
   #about >div:nth-of-type(2):hover .card1 {
-    background: url("./images/exercise2.jpg") left center no-repeat;
+    background: url("./images/serene2.jpg") left center no-repeat;
     background-size: 600px;
     filter: blur(.4rem);
   }
@@ -92,11 +92,11 @@
     opacity: 1;
   }
   .card2 {
-    background: url("./images/exercise4.jpg") center center no-repeat;
+    background: url("./images/serene3.jpg") center center no-repeat;
     background-size: 300px;
   }
   #about >div:nth-of-type(3):hover .card2{
-    background: url("./images/exercise4.jpg") left center no-repeat;
+    background: url("./images/serene3.jpg") left center no-repeat;
     background-size: 600px;
     filter: blur(.4rem);
   }

@@ -253,6 +253,13 @@ h1
   align-items: center;
   flex-direction: column;
   padding: 125px 0;
+  gap: 30px;
+}
+
+.specialP
+{
+  width: 65%;
+  text-align: center;
 }
 
 .accentBtn
@@ -744,6 +751,32 @@ nav a
 }
 
 
+.footerLinks
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: unset !important;
+  padding: unset !important;
+}
+
+#FooterLogo
+{
+  height: 150px;
+  width: 150px;
+
+}
+
+.footerLinks li{
+ width: 100%;
+ padding: unset !important;
+ margin: unset !important;
+ text-align: center;
+}
+
 .mobileToggle
 {
     padding: 20px;
@@ -964,6 +997,39 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+
+@media screen and (max-width: 950px)
+{
+  #aboutOverlap{
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 0px;
+    margin-top: -20px;
+    margin-bottom: 0;
+  }
+  #leftOverlap{
+    width: 100vw;
+    margin: unset;
+    transform: unset;
+    order: 3;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+    text-align: center;
+    padding: 0 40px;
+    height: unset;
+  }
+  #rightOverlap
+  {
+    width: 80%;
+    transform: unset;
+    order: 2;
+    border-radius: 15px;
+    box-shadow: 0 0 15px gray;
+  }
 }
 
 @media screen and (max-width: 768px)
