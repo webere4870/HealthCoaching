@@ -28,7 +28,7 @@
 <body>
     <input type="checkbox" id="active">
     <label for="active" class="green menu-btn"><span></span></label>
-
+    <img src="./images/logo.png" alt="" class="footerLogo"/>
     <div class="wrapper">
         <ul>
             <li><a href="./index.html">Home</a></li>
@@ -39,8 +39,14 @@
         </ul>
     </div>
     <div id="blogPage">
+        <div id="NotFoundWrapper" class="d-none">
+            <h1>Blogs coming soon!</h1>
+            <svg id="PostsNotFound" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+              </svg>
+        </div>
         <div id="tailwindGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-     
+            
         </div>
             <!-- <div class="blogCard">
                 <img src="./images/exercise1.jpg"/>
@@ -61,17 +67,17 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                             <div class="copyright-text">
-                                <p>Copyright &copy; 2018, All Right Reserved <a href="">AO Health Coaching</a></p>
+                                <p>Copyright &copy; 2023, All Right Reserved <a href="">AO Health Coaching</a></p>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a target="_blank" href="https://buy.stripe.com/dR6aFRdSv86Z2v6bII">Pay</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -95,7 +101,10 @@
       // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
       const res = data.items //This is an array with the content. No feed, no info about author etc..
       const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
-
+        if(posts.length == 0)
+        {
+            $("#NotFoundWrapper").toggleClass("d-none")
+        }
       // Functions to create a short text out of whole blog's content
       function toText(node) {
          let tag = document.createElement('div')

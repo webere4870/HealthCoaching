@@ -31,7 +31,7 @@
 <body>
     <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><span></span></label>
-
+    <img src="./images/logo.png" alt="" class="footerLogo"/>
     <div class="wrapper">
         <ul>
             <li><a href="./index.html">Home</a></li>
@@ -75,32 +75,41 @@
             <div class="card card0">
                 <div class="">
                   <h2>Meet</h2>
-                  
+                  <button class="hoverBtn">Read More</button>
                 </div>
     
               </div>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam incidunt labore debitis laborum suscipit vel ab neque aspernatur est illo!</p>
+              <p>Depending on the package you have chosen, we will meet at regularly established intervals</p>
         </div>
         <div class="overCard">
             <div class="card card1">
                 <div class="">
-                  <h2>Learn</h2>
-                  
+                  <h2>Practice</h2>
+                  <button class="hoverBtn">Read More</button>
                 </div>
                 
               </div>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam incidunt labore debitis laborum suscipit vel ab neque aspernatur est illo!</p>
+              <p>You are given the opportunity to apply the things talked about during sessions and receive feedback over the duration of our sessions.</p>
         </div>
         <div class="overCard">
             <div class="card card2">
                 <div class="">
                   <h2>Change</h2>
-                  
+                  <button class="hoverBtn">Read More</button>
                 </div>
               </div>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam incidunt labore debitis laborum suscipit vel ab neque aspernatur est illo!</p>
+              <p>Once we have met several times, the process is far from over! It is up to you to carry the things learned into your daily life.</p>
         </div>
     </div>
+    <script>
+        $(document).ready(()=>
+        {
+            $(".hoverBtn").click((evt)=>
+            {
+                $(evt.currentTarget).parent().parent().trigger("hover")
+            })
+        })
+    </script>
     <!-- <div id="aboutFollow">
         <div class="containerT">
                 <div id="timeline">
@@ -184,17 +193,17 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2018, All Right Reserved <a href="">AO Health Coaching</a></p>
+                        <p>Copyright &copy; 2023, All Right Reserved <a href="">AO Health Coaching</a></p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a target="_blank" href="https://buy.stripe.com/dR6aFRdSv86Z2v6bII">Pay</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
