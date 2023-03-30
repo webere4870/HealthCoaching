@@ -26,6 +26,25 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+   ini_set( 'display_errors', 1 );
+   error_reporting( E_ALL );
+   $from = $_POST["email"];
+   $to = "admin@aohealthcoaching.com";
+   $subject = "Website Message";
+   $msg = $_POST["message"];
+   $message = "From: " . $from . "\nMessage: " . $msg;
+  // The content-type header must be set when sending HTML email
+   $headers = "MIME-Version: 1.0" . "\r\n";
+   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+   $headers = "From:" . $from;
+   
+   if(mail($to,$subject,$message, $headers)) {
+      $response = "Thank you!";
+   } else {
+      $response = "Error. Unable to send message.";
+   }
+?>
     <input type="checkbox" id="active">
     <label for="active" class=" green menu-btn"><span></span></label>
       <img src="./images/logo.png" alt="" class="footerLogo"/>
@@ -79,23 +98,15 @@
             <div class="formbg-outer">
               <div class="formbg">
                 <div class="formbg-inner padding-horizontal--48">
-                  <span class="padding-bottom--15">Send me a message!</span>
-                  <form method="post" action="./response.php" id="stripe-login">
-                    <div class="field padding-bottom--24">
-                      <label for="email">Email</label>
-                      <input type="email" name="email">
-                    </div>
-                    <div class="field padding-bottom--24">
-                      <div class="grid--50-50">
-                        <label for="message">Message</label>
-                      </div>
-                      <input type="text" name="message">
-                    </div>
+                  <span style="text-align: center;" class="padding-bottom--15"><?php echo $response ?></span>
+                  <form method="get" action="./index.html" id="stripe-login">
+ 
+
                     <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
      
                     </div>
                     <div class="field padding-bottom--24">
-                      <input type="submit" name="submit" value="Send Message">
+                      <input type="submit" name="submit" value="Back to Home">
                     </div>
 
                   </form>
